@@ -1,0 +1,47 @@
+create table loginTemple(
+name varchar(20),
+email varchar(50),
+number varchar(10),
+payment varchar(50),
+password varchar(50)
+);
+
+
+insert into loginTemple(
+name,
+email,
+number,
+payment,
+password
+)
+values ('Shaifali','shaili054@gmail.com','8209601038','200','shaif123');
+
+
+create table bookingTemple(
+Name varchar(20),
+Email varchar(50),
+Contact varchar(10),
+Amount varchar(50)
+);
+
+
+create table donateTemple(
+firstname varchar(20),
+lastname varchar(20),
+email varchar(50),
+phone varchar(10),
+amount varchar(50)
+);
+
+
+alter table donateTemple
+Modify column id int not null Auto_Increment Primary Key;
+
+create table bookPrasad(
+TempleName varchar(20),
+Amount varchar(50)
+);
+
+
+select distinct name,number,TempleName,Amount
+from login  join bookPrasad  on number = Number; 
